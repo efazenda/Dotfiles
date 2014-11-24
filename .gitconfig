@@ -1,0 +1,56 @@
+# Git Configuration by Edouard Fazenda <edouard.fazenda@gmail.com>
+
+[user]
+	name = Edouard Fazenda
+	email = edouard.fazenda@gmail.com
+
+[core]
+	pager = cat
+	editor = vim
+	excludesfile = ~/.gitignore_global
+
+[diff]
+    tool = vimdiff
+
+[merge]
+    tool = vimdiff
+
+[alias]
+
+	st = status
+	ci = commit
+	br = branch
+	df = diff
+	fe = fetch
+	me = merge
+	co = checkout
+	cp = cherry-pick
+	lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ll = log --stat --abbrev-commit
+	put = push origin master
+	get = pull origin master
+	amend = commit --amend
+	last = log -1 --oneline
+	unstage = reset HEAD --
+	ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore	
+	sts = stash save
+	stp = stash pop
+	std = stash drop
+	stl = stash list	
+
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
