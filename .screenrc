@@ -1,0 +1,68 @@
+# ~/.screenrc Configuration File by Edouard Fazenda <edouard.fazenda@gmail.com>
+
+# Don't display startup message when openning screen
+startup_message off
+
+# Define a 999999 line scrollback buffer
+defscrollback 999999
+
+# Enable autodetach 
+autodetach on
+
+
+# Select default character encoding 
+defutf8 on
+
+# Set the default program for new window
+defshell bash
+
+# Set whether a clear screen sequence should nuke all the output
+defautonuke on
+
+# Enable logging and set the naming of the logfile 
+deflog on
+logfile /tmp/screenlog-%S-%Y-%m-%d
+
+# Define some environment variables
+setenv LANG fr_FR.UTF-8
+setenv LC_COLLATE fr_FR.UTF-8
+setenv LC_CTYPE fr_FR.UTF-8
+setenv LC_MESSAGES fr_FR.UTF-8
+setenv LC_MONETARY fr_FR.UTF-8
+setenv LC_NUMERIC fr_FR.UTF-8
+setenv LC_TIME fr_FR.UTF-8
+
+
+# Enable vbell
+vbell on 
+vbellwait 2
+vbell_msg "Hey ! Hey !"
+
+# Creating dedicated screen windows
+screen -t IRC 0 irssi
+screen -t Htop 1 htop
+screen -t Shell 2
+screen -t Log 3 tail -f /var/log/messages
+#screen -t Mail 3 mutt
+
+# Selecting the default window
+select 2
+
+# Unbind defaults
+bind ^m
+bind ^i
+bind ^f
+bind ^s
+bind ^w
+
+# Keyboard shorcuts
+bind ^i screen -t IRC irssi
+bind ^h screen -t Htop htop
+bind ^l screen -t Log tail -f /var/log/messages
+#bind ^m screen -t Mail mutt
+
+
+# Change the hardstatus settings to give an window list at the bottom of the                                                                        
+# screen, with the time and date and with the current window highlighted                                                                            
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
