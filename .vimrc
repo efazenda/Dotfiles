@@ -25,3 +25,14 @@ set breakat=^I!@*-+;:,./?
 set casemap=internal,keepascii
 set cdpath=$HOME
 set cedit=^F
+set cindent
+set cinkeys=0{,0},0),:,0#,!^F,o,O,e
+set cinwords=if,else,while,do,for,switch
+set cmdheight=3
+set cmdwinheight=7
+set comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+set commentstring=/*%s*/
+set formatoptions=tcqr
+set complete=.,w,b,u,t,i
+set completeopt=menu,preview 
+set confirm
