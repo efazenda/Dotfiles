@@ -9,7 +9,6 @@ defscrollback 999999
 # Enable autodetach 
 autodetach on
 
-
 # Select default character encoding 
 defutf8 on
 
@@ -31,7 +30,6 @@ setenv LC_MESSAGES fr_FR.UTF-8
 setenv LC_MONETARY fr_FR.UTF-8
 setenv LC_NUMERIC fr_FR.UTF-8
 setenv LC_TIME fr_FR.UTF-8
-
 
 # Enable vbell
 vbell on 
@@ -59,8 +57,7 @@ bind ^w
 bind ^i screen -t IRC irssi
 bind ^h screen -t Htop htop
 bind ^l screen -t Log tail -f /var/log/messages
-#bind ^m screen -t Mail mutt
-
+bind ^m screen -t Mail mutt
 
 # Change the hardstatus settings to give an window list at the bottom of the                                                                        
 # screen, with the time and date and with the current window highlighted                                                                            
