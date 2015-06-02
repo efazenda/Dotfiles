@@ -82,19 +82,32 @@ export PS1="(\t) - [\u@\h \W]\$ "
 export PS2="--> \$ "
 export PS4="$0 $LINEN0 + "
 
-## Set Paths
+## Set Variable Env PATH
 export PATH="$PATH:/home/$USER/git/"
 
 ## Setting the default editor
 export EDITOR="/usr/bin/vim"
 
+## Checking if systemd is installed and setting Systemd Environment Variables.
+/usr/bin/which systemctl > /dev/null 2>&1
 
-rpm -q systemd > /dev/null 2>&1
-
-## Configuration of systemd
 if [ $? -eq 0 ]; then
   export SYSTEMD_PAGER=
 fi
+
+## Checking if vagrant is installed and setting Vagrant Environement Variables.
+/usr/bin/which vagrant > /dev/null 2>&1
+
+if [ $? -eq 0 ]; then
+  export VAGRANT_CHECKPOINT_DISABLE=
+  export VAGRANT_CWD=
+  export VAGRANT_DOTFILE_PATH=".vagrant"
+  export VAGRANT_HOME="~/.vagrant.d"
+  export VAGRANT_LOG="info"
+  export VAGRANT_NO_PLUGINS=
+  export VAGRANT_VAGRANTFILE="Vagrantfile"
+fi
+
 
 ## Aliases 
 
