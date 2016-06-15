@@ -1,6 +1,4 @@
-# File : .bashrc 
-# Author : Edouard Fazenda 
-# Email : <edouard.fazenda@gmail.com>
+# ~/.bashrc Configuration File by Edouard Fazenda <edouard.fazenda@gmail.com>
 
 ## Source global definitions
 if [ -f /etc/bashrc ]; then
