@@ -4,6 +4,10 @@
 URxvt.foreground: 	#98d1ce
 URxvt.background: 	#0a0f14
 
+! Define transparency
+URxvt.transparent: true
+URxvt.shading: 20
+
 ! Define the 16 colors 
 URxvt.color0:       #0a0f14
 URxvt.color8:       #10151b
@@ -33,9 +37,9 @@ URxvt.cursorColor:  #98d1ce
 URxvt.geometry:	90x30
 
 ! Define the font family and size
-URxvt.font: xft:Consolas:size=9
-URxvt.boldFont:	xft:Consolas:size=9
-URxvt.boldItalicFont: xft:Consolas:size=9
+URxvt.font: xft:Consolas:size=8
+URxvt.boldFont:	xft:Consolas:size=8
+URxvt.boldItalicFont: xft:Consolas:size=8
 URxvt.letterSpace: -2
 
 ! Define other specials settings
@@ -57,7 +61,7 @@ URxvt*saveLines: 10000
 URxvt*scrollBar: false
 
 ! Define Perls Extensions and Keybindings
-URxvt.perl-lib : ../.urxvt/perl
+URxvt.perl-lib : /home/efazenda/.urxvt/perl
 URxvt.perl-ext-common: default,url-picker,fullscreen,font-size
 URxvt.urlLauncher: firefox
 URxvt.keysym.C-f: perl:url-picker
