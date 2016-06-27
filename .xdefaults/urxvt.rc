@@ -1,0 +1,69 @@
+! configuration file : ~/.xdefaults/urxvt.rc
+
+! Define the foreground and background colors
+URxvt.foreground: 	#E8DFD6
+URxvt.background: 	#021B21
+
+! Define the 16 colors 
+URxvt.color0:       #032C36
+URxvt.color8:       #065F73
+URxvt.color1:       #C2454E
+URxvt.color9:       #EF5847
+URxvt.color2:       #7CBF9E
+URxvt.color10:      #A2D9B1
+URxvt.color3:       #8A7A63
+URxvt.color11:      #BEB090
+URxvt.color4:       #2E3340
+URxvt.color12:      #61778D
+URxvt.color5:       #FF5879
+URxvt.color13:      #FF99A1
+URxvt.color6:       #44B5B1
+URxvt.color14:      #9ED9D8
+URxvt.color7:       #F2F1B9
+URxvt.color15:      #F6F6C9
+
+! Define the pointer and the cursor settings
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.cursorColor:  #2E3340
+!URxvt.pointerColor: #2E3340
+!URxvt.pointerColor2: #2E3340
+
+! Define the geometry of the terminal emulator
+URxvt.geometry:	90x30
+
+! Define the font family and size
+URxvt.font: xft:Consolas:size=9
+URxvt.boldFont:	xft:Consolas:size=9
+URxvt.boldItalicFont: xft:Consolas:size=9
+URxvt.letterSpace: -2
+
+! Define other specials settings
+URxvt.chdir:
+URxvt.modifier: alt
+URxvt.insecure: false
+URxvt.tripleclickwords: true
+URxvt.loginShell: true
+URxvt.lineSpace: 0
+
+! Define border settings
+URxvt.borderLess: false
+URxvt.internalBorder: 1
+URxvt.externalBorder: 1
+URxvt.borderColor: black
+
+! Define scrollbar settings
+URxvt*saveLines: 10000
+URxvt*scrollBar: false
+
+! Define Perls Extensions and Keybindings
+URxvt.perl-lib : ../.urxvt/perl
+URxvt.perl-ext-common: default,url-picker,fullscreen,font-size
+URxvt.urlLauncher: firefox
+URxvt.keysym.C-f: perl:url-picker
+URxvt.keysym.F11: perl:fullscreen:switch
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+

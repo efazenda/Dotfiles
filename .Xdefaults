@@ -1,0 +1,4 @@
+! Xdefaults configuration file : ~/.Xdefaults
+
+#include ".xdefaults/main.rc"
+

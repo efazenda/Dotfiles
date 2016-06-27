@@ -1,0 +1,5 @@
+! Main configuration file : ~/.xdefaults/main.rc
+
+!#include "urxvt.rc"
+#include "urxvt-gotham.rc"
+
