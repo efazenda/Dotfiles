@@ -1,0 +1,86 @@
+# See below for the list of available variables.
+
+
+##  Defining a new custom field
+
+field pager = Pager
+field address_lines = Address, list
+field birthday = Birthday, date
+field facebook = Facebook, string
+field github = Github, string
+field linkedin = Linkedin, string
+
+## Defining a view/tab
+
+view CONTACT = name, email
+view ADDRESS = address_lines, city, state, zip, country
+view PHONE = phone, workphone, pager, mobile, fax
+view OTHER = url, facebook, github, linkedin, birthday
+
+##  Variables
+
+# Automatically save database on exit
+set autosave=true
+
+#  Specify how the fields should be preserved
+set preserve_fields=all
+
+# Show all email addresses in list
+set show_all_emails=true
+
+# Format of an entry's line in the main abook screen
+set index_format=" {name:25} {mobile:10} {birthday}"
+
+# Command used to start mutt
+set mutt_command=mutt
+
+# Return all email addresses to a mutt query
+set mutt_return_all_emails=true
+
+# Command used to print
+set print_command=lpr
+
+# Command used to start the web browser
+set www_command=firefox
+
+# Address style [eu|us|uk]
+set address_style=eu
+
+# Use ASCII characters only
+set use_ascii_only=false
+
+# Defined wether to avoid adding addresses already in database.
+set add_email_prevent_duplicates=false
+
+# Field to be used with "sort by field" command
+set sort_field=nick
+
+# Show cursor in main display
+set show_cursor=true
+
+# Defined if the navigation via the mouse is activated
+set use_mouse=true
+
+# Defines the number of lines is scrolled by on a mouse wheel (use_mouse variable should activated)
+set scroll_speed=2
+
+# Enable use of colors
+set use_colors=true
+
+# Foreground color for header bar
+set color_header_fg=blue
+
+# Background color for header bar
+set color_header_bg=default
+
+# Foreground color for the footer bar
+set color_footer_fg=blue
+
+# Background color for the footer bar
+set color_footer_bg=default
+
+# Foreground color for list header
+set color_list_header_fg = blue
+
+# Background color for list header
+set color_list_header_bg = default
