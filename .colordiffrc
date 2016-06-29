@@ -1,0 +1,25 @@
+# ~/.colordiffrc Configuration File by Edouard Fazenda <edouard.fazenda@gmail.com>
+
+# Keep Author informations on top of diff output
+banner=yes
+
+# Color Path 
+color_patches=no
+
+# Specify diff command to use
+diff_cmd=diff
+
+# Don't color highlighted text
+plain=off
+
+# Color for the new text
+newtext=darkgreen
+
+# Color for the old text
+oldtext=darkred
+
+# Color for the diff text
+diffstuff=darkcyan
+
+# Color for CVS 
+cvsstuff=cyan
