@@ -1,0 +1,152 @@
+# ~/.config/zathura/zathurarc Configuration File by Edouard Fazenda <edouard.fazenda@gmail.com>
+
+## Options
+
+# Defines if the search results should be cleared on abort
+set abort-clear-search true
+
+# Defines which auto adjustment mode should be used if a document is loaded (Can be best-fit|width)
+set adjust-open best-fit
+
+# Defines if the number of pages per row should be honored when advancing a page
+set advance-pages-per-row false
+
+# Defines the used of database backend (Can be plain|sqlite)
+set database sqlite
+
+# Defines the color that is used for highlithing parts of the document
+set highlight-color #528AC9
+
+# Defines the color that is used to show the current selected highlighted element 
+set highlight-active-color #52AEC9
+
+# Defines the opacity of a highlighted element
+set highlight-transparency 0.5
+
+# Defines the page padding gap in pixel between each rendered page
+set page-padding 1
+
+# Defines the time in seconds to unload the pages which are not visible
+set page-store-interval 30
+
+# Defines the number of pages that are rendered next to each other in a row
+set pages-per-row 1
+
+# Enable the recolor
+set recolor true
+
+# Defines the color value that is used to represent dark colors in recoloring mode
+set recolor-darkcolor #FFFFFF
+
+# Defines the color value that is used to represent light colors in recoloring mode
+set recolor-lightcolor #000000
+
+# Defines if the loading text should be displayed if a page is rendered
+set render-loading true
+
+# Defines the step size of scrolling by calling the scroll command once
+set scroll-step 40
+
+# Defines if the first/last page should be wrapped 
+set scroll-wrap false
+
+# Defines the horizontal step size of scrolling by calling the scroll command once
+set scroll-hstep -1
+
+# Defines the maximum percentage that the zoom level can be 
+set zoom-max 1000
+
+# Defines the minimum percentage that the zoom level can be
+set zoom-min 5
+
+# Defines the amount of percent that is zoomed in or out on each command
+set zoom-step 10
+
+# Defines the maximum number of displayed completion entries
+#n-completion-items 15
+
+# Show or hides GUI elements (Can be c = command line | s = status bar | h = honrizontal scrollbar | v = vertical scrollbar)
+set guioptions s
+
+# Defines the honrizontal padding of the statusbar and notificationbar
+set statusbar-h-padding 8
+
+# Defines the vertical padding of the statusbar and notificationbar
+set statusbar-v-padding 2
+
+# Defines the default height of the window when startup
+set window-height 600
+
+# Defines the default width of the window when startup
+set window-width 800 
+
+# Enable D-bus service in order to have the SyncTeX forward synchronization 
+set dbus-service true
+
+# Enable incremental search (search while typing)
+set incremental-search true
+
+# Defines the number of pages that could be kept in the page cache
+set page-cache-size 15
+
+# Defines the maximum size in pixels of the thumbmail that could be kept in the thumbmail cache per page
+set page-thumbnail-size 4194304
+
+# Defines the proportion of the current viewing area that should be visible after scrolling a full page
+set scroll-full-overlap 0
+
+# Defines if the directories should be displayed in completion
+set show-directories true
+
+# Defines if hidden files and directories should be displayed in completion
+set show-hidden true
+
+# Defines the number of recent files should be displayed in completion
+set show-recent 5
+
+# Defines if scrolling by half or full pages stops at boundaries
+set scroll-page-aware false
+
+# Enable the ability of changing zoom when following links
+set link-zoom true
+
+# Enable aligning to the left internal link targets
+set link-hadjust true
+
+# Enable horizontally centered search results
+set search-hadjust true
+
+# Use basename of the file in the window title
+set window-title-basename true
+
+# Display a short version of the file path, which replaces $HOME with ~, in the window title.
+set window-title-home-tilde false
+
+# Display the page number in the window title
+set window-title-page false
+
+# Use basename of the file in the statusbar
+set statusbar-basename false
+
+# Display a short version of the file path, which replaces $HOME with ~, in the statusbar
+set statusbar-home-tilde false
+
+# Disable horizontally centered zooming
+set zoom-center false
+
+#  Defines  the  X  clipboard  into  which mouse-selected data will be written.  When it is "clipboard", selected data will be written to the CLIPBOARD
+#  clipboard, and can be pasted using the Ctrl+v key combination.  When it is "primary", selected data will be written to the  PRIMARY  clipboard,  and
+#  can be pasted using the middle mouse button, or the Shift-Insert key combination.
+set selection-clipboard primary
+
+# Defines if a notification should be displayed after selecting text
+set selection-notification true
+
+## Keybindings
+
+unmap q
+unmap s
+map <C-q> quit
+map <S-Space> navigate previous
+map <Space> navigate next
+map w adjust_window width
